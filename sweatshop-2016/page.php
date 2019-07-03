@@ -68,40 +68,7 @@ if(have_posts()) : while (have_posts()) : the_post();
 		}
 	}
 
-	if(is_front_page()) {
-		$news_query = new WP_query('posts_per_page=2');
-		if($news_query->have_posts()) :
-			$p_image = get_field('placeholder_image','options');
-			$p_size = 'tn1600crop';
-			$p_img = $p_image['sizes'][$p_size];
-			$p_width = $p_image['sizes'][ $p_size . '-width' ];
-			$p_height = $p_image['sizes'][ $p_size . '-height' ];
-			echo '<div id="news" class="container">
-				<div class="newsheading column">
-					<h2 class="text-center">Latest from the Blog</h2>
-				</div><!-- .newsheading -->
-				<div class="row">';
 
-					while($news_query->have_posts()) : $news_query->the_post();
-						echo '<div class="column medium-6">
-							<div class="newsimage">
-								<a href="'.get_permalink().'" alt="Read '.get_the_title().'">
-									'.((has_post_thumbnail())?get_the_post_thumbnail($post->id, 'tn490crop'):"<img src='".$p_img."' alt='".$p_image['alt']."' title='".$p_image['title']."' width='".$p_width."' height='".$p_height."'  />").'
-									<h3 class="textwhite">'.get_the_title().'</h3>
-								</a>
-							</div><!-- .newsimage -->
-							<div class="newscontent">
-								<p>';
-									ssf_excerpt(array('length' => 18, 'suffix' => '&hellip;', 'link_text' => 'Read More'));
-								echo '</p>
-							</div><!-- .newscontent -->
-						</div><!-- .column medium-6 -->';
-					endwhile;
-
-				echo '</div>
-			</div>';
-		endif; wp_reset_postdata();
-	}
 
 	if(have_rows('page_details')):
 		while(have_rows('page_details')): the_row();
@@ -521,6 +488,43 @@ if(have_posts()) : while (have_posts()) : the_post();
 		endwhile; // Page Details
 	endif; // Page Details
 endwhile; // end of the loop.
+
+// Blog block - only shows on home page
+	if(is_front_page()) {
+		$news_query = new WP_query('posts_per_page=2');
+		if($news_query->have_posts()) :
+			$p_image = get_field('placeholder_image','options');
+			$p_size = 'tn1600crop';
+			$p_img = $p_image['sizes'][$p_size];
+			$p_width = $p_image['sizes'][ $p_size . '-width' ];
+			$p_height = $p_image['sizes'][ $p_size . '-height' ];
+			echo '<div id="news" class="container">
+				<div class="newsheading column">
+					<h2 class="text-center">Latest from the Blog</h2>
+				</div><!-- .newsheading -->
+				<div class="row">';
+
+					while($news_query->have_posts()) : $news_query->the_post();
+						echo '<div class="column medium-6">
+							<div class="newsimage">
+								<a href="'.get_permalink().'" alt="Read '.get_the_title().'">
+									'.((has_post_thumbnail())?get_the_post_thumbnail($post->id, 'tn490crop'):"<img src='".$p_img."' alt='".$p_image['alt']."' title='".$p_image['title']."' width='".$p_width."' height='".$p_height."'  />").'
+									<h3 class="textwhite">'.get_the_title().'</h3>
+								</a>
+							</div><!-- .newsimage -->
+							<div class="newscontent">
+								<p>';
+									ssf_excerpt(array('length' => 18, 'suffix' => '&hellip;', 'link_text' => 'Read More'));
+								echo '</p>
+							</div><!-- .newscontent -->
+						</div><!-- .column medium-6 -->';
+					endwhile;
+
+				echo '</div>
+			</div>';
+		endif; wp_reset_postdata();
+	}
+// -- Blog block
 endif;// end if have posts. ?>
 
 <?php wp_reset_postdata(); ?>
