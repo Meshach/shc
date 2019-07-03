@@ -1,0 +1,24 @@
+/************ Content ************/
+/* FONTS */
+/* COLORS */
+.slideshowcontainer {
+  background: #2D1D45; }
+
+.slideshow .slidecontent {
+  padding: 25px; }
+
+.slideshow h2 {
+  color: #fff;
+  margin: 0 0 20px; }
+
+.slideshow h2 span {
+  color: #F1647B;
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  line-height: 1;
+  margin-bottom: 10px; }
+
+.slideshow p {
+  color: #fff; }

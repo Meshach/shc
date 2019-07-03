@@ -1,0 +1,1 @@
+var $d=jQuery.noConflict();$d(document).ready(function(){$d(document).foundation(),$d(".slideshow").bxSlider({auto:!0,nextText:'<i class="fa fa-angle-right"></i>',prevText:'<i class="fa fa-angle-left"></i>'})});

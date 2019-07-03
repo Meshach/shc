@@ -1,0 +1,107 @@
+/************ Footer ************/
+/* FONTS */
+/* COLORS */
+footer {
+  background: #6FCCB3;
+  position: relative; }
+  footer:before {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden;
+    outline: 1px solid transparent; }
+  footer:before {
+    top: 0;
+    transform: skewY(1deg);
+    transform-origin: 100% 0; }
+
+footer {
+  padding: 15px 25px; }
+
+footer p {
+  color: #fff;
+  font-size: 10px;
+  margin: -5px 0 0; }
+
+footer ul.inline.simple {
+  margin-top: 20px; }
+
+footer ul.inline.simple li {
+  margin-bottom: 5px;
+  text-align: center; }
+
+footer ul li a {
+  color: #fff;
+  font-family: "museo-sans-rounded", "proxima-nova", helvetica, verdana, arial, sans-serif;
+  font-size: .875em;
+  letter-spacing: .02em;
+  text-transform: uppercase; }
+
+footer ul li.facebook a,
+footer ul li.twitter a {
+  display: block;
+  position: relative;
+  text-align: center; }
+
+footer ul li.facebook a:before,
+footer ul li.twitter a:before {
+  color: #2D1D45;
+  content: '\f09a';
+  display: block;
+  font-family: 'FontAwesome';
+  font-size: 2.4em;
+  line-height: 1.2em;
+  position: absolute;
+  left: 0; }
+
+footer ul li.twitter a:before {
+  content: '\f099'; }
+
+@media only screen and (min-width: 47.5em) {
+  footer .row {
+    position: relative; }
+
+  footer .row .column:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0; }
+
+  footer ul.inline.simple {
+    margin-top: 0; }
+
+  footer ul.inline.simple li {
+    margin-left: 16px !important;
+    text-align: left;
+    vertical-align: middle; }
+
+  footer ul.inline.simple li.twitter {
+    margin-left: 5px !important; }
+
+  footer ul li.facebook a,
+  footer ul li.twitter a {
+    height: 36px;
+    overflow: hidden;
+    padding-left: 0;
+    text-align: center;
+    width: 17px; }
+
+  footer ul li.twitter a {
+    width: 44px; }
+
+  footer ul li.facebook a:before,
+  footer ul li.twitter a:before {
+    height: inherit;
+    width: inherit; } }
+@media only screen and (min-width: 64.0625em) {
+  footer ul.inline.simple li {
+    margin-left: 25px !important;
+    vertical-align: middle; }
+
+  footer ul.inline.simple li.twitter {
+    margin-left: 5px !important; } }

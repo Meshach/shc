@@ -1,0 +1,469 @@
+/************ Healcode ************/
+
+@import 'variables';
+
+#schedule,
+.healcode-schedule {
+
+	.header {
+		text-align: center;
+	}
+
+	a.action_icon {
+		color: $teal;
+		display: inline-block;
+		height: 20px;
+		margin: 0 .5em 1em;
+		width: 20px;
+	}
+
+	a.action_icon img,
+	a.action_icon span {
+		display: none;
+	}
+
+	a.action_icon:after {
+		color: $teal;
+		display:block;
+		font-family: FontAwesome;
+		font-size: 1.375em;
+		font-weight: normal;
+		line-height: 1;
+	}
+
+	a.action_icon.print_version:after {
+		content: "\f02f";
+	}
+
+	a.action_icon.cart_version:after {
+		content: "\f07a";
+	}
+
+	a.action_icon.my_account_version:after {
+		content: "\f007";
+	}
+
+	h1 span {
+		color: $purple;
+		display: inline-block;
+		font-size: 1.5rem;
+		font-weight: bold;
+		line-height: 1rem;
+		text-transform: none;
+	}
+}
+
+.date_links .healcode-jump-to-date {
+	display: block;
+	position: relative;
+	margin-right: 4px;
+}
+
+.date_links .healcode-jump-to-date:after {
+	color: $purple;
+	content: "\f133";
+	display: block;
+	font-family: FontAwesome;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#schedule .healcode-calendar,
+.healcode-schedule .healcode-calendar {
+	display: none;
+}
+
+div.healcode,
+div.healcode .header .date_links,
+div.healcode .week_links a,
+div.healcode .week_links a:visited,
+div.healcode .healcode-date-links-area a,
+div.healcode .healcode-date-links-area a:visited {
+	font-size: 1em !important;
+}
+
+table.schedule {
+	width: 100%;
+}
+
+table.schedule.mindbody_classic {
+	font-size: .8125em;
+}
+
+table.schedule td {
+	padding: 15px 5px;
+}
+
+div.list_view table.schedule td {
+	padding: 0;
+}
+
+table.schedule td.mbo_class a,
+div.list_view ol.schedule_list div.mbo_class a {
+	color: $purple !important;
+	font-family: $museo;
+	font-size: 1rem;
+}
+
+.hc_class_availability,
+.list_view .trainer,
+.list_view .visit_type,
+.list_view .type_group {
+    display: block;
+    font-style: italic;
+    font-size: 13px !important;
+	line-height: 15px !important;
+}
+
+.list_view .hc_class_availability,
+.list_view .trainer {
+	margin-top: 5px;
+}
+
+.list_view .hc_time {
+	color: $purple;
+}
+
+a.hc-button.signup_now {
+    color: $pink;
+    font-weight: 600;
+}
+
+div.list_view ol.schedule_list div.mbo_class a {
+	display: block;
+	font-size: 1.2rem;
+	margin-top: 5px;
+}
+
+table.schedule td.trainer a {
+	color: $grey;
+}
+
+table.schedule th {
+	color: $teal;
+	font-family: $museo;
+	font-size: .97rem;
+	padding: 15px 5px;
+	text-align: left;
+}
+
+div.list_view ol.schedule_list {
+	font-size: 1em !important;
+	margin: 0;
+}
+
+div.healcode div.list_view li.odd,
+div.healcode table.list_view ol.schedule_list li.odd {
+	background: $lightgrey;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 47.5em) {
+	#schedule a.action_icon,
+	.healcode-schedule a.action_icon {
+	    float: right;
+		margin-bottom: 0;
+		margin-top: 10px;
+	}
+
+	.date_links {
+		clear: both;
+		margin-bottom: 20px;
+	}
+
+	.date_links:after {
+		clear: both;
+		content: "";
+		display: block;
+	}
+
+	.date_links .healcode-previous,
+	.date_links .healcode-today,
+	.date_links .healcode-next {
+		float: left;
+		margin-top: 7px;
+	}
+
+	.date_links .healcode-today,
+	.date_links .healcode-next {
+		margin-left: 5px;
+	}
+
+	.date_links .healcode-jump-to-date {
+		float: right;
+		width: 23%;
+	}
+
+	#schedule,
+	.healcode-schedule {
+		.filters {
+			clear: both;
+			margin-bottom: 10px;
+		}
+
+		.filters .filter_days {
+			float: left;
+		}
+
+		.filters .filter_time_of_day {
+			float: right;
+		}
+
+		.filters select {
+			margin: 0;
+			margin-left: 2%;
+		    width: 23%;
+		}
+
+		.filters select:first-child {
+			margin-left: 0 ;
+		}
+
+		h1 {
+			margin-bottom: 10px;
+			text-align: left;
+		}
+	}
+
+
+	.healcode-schedule h1 {
+		display: none;
+	}
+
+	.healcode-schedule {
+		display: block;
+		padding: 40px 20px;
+	}
+
+	.healcode-schedule .filters {
+		padding-top: 10px;
+	}
+
+	.healcode-schedule .filters:after {
+		clear: both;
+		content: "";
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 64.0625em) {
+
+
+	table.schedule td {
+		padding: 15px 10px;
+	}
+
+	table.schedule th {
+		padding: 15px 10px;
+	}
+}
+
+.healcode-schedule-professional {
+	padding: 40px 0;
+
+	.bw-widget {
+		position: relative;
+		@media only screen and (min-width: 47.5em) {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.bw-calendar-container {
+			border: none;
+			margin: 0 auto 0 0;
+			padding: 0;
+			text-align: left;
+
+			@media only screen and (min-width: 47.5em) {
+				margin: 0 0 0 40px;
+			}
+
+			.bw-calendar {
+				display: none;
+			}
+
+			.bw-fullcal-button {
+				background: $teal;
+				color: #fff !important;
+				font-family: $museo !important;
+				font-weight: 700;
+				padding: 10px 15px;
+			}
+		}
+
+		.bw-filters {
+			align-items: center;
+			background-color: transparent;
+			display: -webkit-flex !important;
+			display: -ms-flex !important;
+			display: flex !important;
+			flex-grow: 1;
+			flex-wrap: wrap;
+			justify-content: start;
+			margin-bottom: 10px;
+
+			@media only screen and (min-width: 47.5em) {
+				margin-bottom: 0;
+			}
+
+			.filter_time_of_day {
+				padding: 0;
+				margin-right: 20px;
+
+				.bw-checkbox {
+					display: block;
+
+					@media only screen and (min-width: 47.5em) {
+						display: inline-block;
+					}
+				}
+			}
+
+			.bw-filters-flex-container {
+				border: none;
+				flex: 0 0 100%;
+
+				@media only screen and (min-width: 47.5em) {
+					flex: auto;
+				}
+
+				.bw-filters__controls {
+					border: none;
+					padding: 0;
+
+					.bw-filters__reset {
+						border: 1px solid rgb(241, 241, 241);
+						color: #555 !important;
+						padding: 3px 10px;
+						margin-top: 4px;
+						text-decoration: none;
+					}
+				}
+
+				.bw-filters__selects {
+					border: none;
+					margin: 0;
+				}
+			}
+		}
+
+		.bw-header__filter-link {
+			display: none;
+		}
+
+		.bw-widget__header {
+			background-color: transparent;
+			margin-bottom: 10px;
+			padding: 0;
+
+			@media only screen and (min-width: 47.5em) {
+				margin-bottom: 0px;
+			}
+
+			.bw-header__title {
+				color: $purple;
+				font-family: $museo !important;
+				font-size: 18px;
+				padding: 0 15px;
+			}
+		}
+
+		.bw-widget__preheader {
+			border:none;
+			flex: 0 0 100%;
+			padding: 0;
+
+			@media only screen and (min-width: 47.5em) {
+				position: absolute;
+				right: 0;
+				top: -60px;
+			}
+
+			button {
+				border: 2px solid rgb(241, 241, 241);
+				font-family: $museo !important;
+				padding: 10px 15px;
+			}
+		}
+
+		.bw-widget__sessions-filtered-collection {
+			border: 1px solid rgb(241, 241, 241);
+			flex: 0 0 100%;
+			margin-top: 20px;
+
+			.bw-widget__day {
+
+				.bw-session {
+					background-color: rgb(241, 241, 241);
+					border: none;
+					padding: 10px 20px;
+
+					.bw-session__info {
+						@media only screen and (min-width: 47.5em) {
+							align-items: center;
+							display: -webkit-flex;
+							display: -ms-flex;
+							display: flex;
+							justify-content: space-between;
+							margin-right: 40px;
+						}
+
+						.bw-session__time {
+							flex: 0 0 25%;
+
+							.hc_time {
+								color: rgb(105,105,105);
+								font-size: 13px;
+								font-weight: 400;
+							}
+						}
+
+						.bw-session__group1 {
+							flex: 0 0 50%;
+
+							.bw-session__name {
+								color: $purple;
+								font-family: $museo !important;
+							}
+						}
+
+						.bw-session__group2 {
+							flex: 0 0 25%;
+
+							.bw-session__detail-link {
+								width: 100%;
+								border: 1px solid #e0e0e0;
+								padding: 5px 10px;
+								font-family: $museo;
+								text-transform: capitalize;
+							}
+						}
+					}
+
+					.bw-widget__cart_button {
+						.bw-widget__cta {
+							color: $pink !important;
+							font-family: $museo !important;
+							font-size: 13px;
+							font-weight: 600;
+						}
+					}
+				}
+
+				.bw-widget__date {
+					background-color: #fff;
+					border: none;
+					color: $teal;
+					font-family: $museo !important;
+					padding: 15px;
+				}
+			}
+		}
+	}
+}
+

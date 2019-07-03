@@ -1,0 +1,724 @@
+/*
+Theme Name: Sweatshop Fitness Health Club
+Theme URI: http://bravenewmedia.net
+Description: This is a custom theme design.
+Author: Brave New Media
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+
+---------- CSS 3 Styles ----------- */
+
+@import 'variables';
+
+/************ Universal Styles ************/
+
+body {
+	background: #fff;
+	color: $grey;
+	font-family: $proxima;
+	position: static;
+}
+
+button, .button, .list_view .hc-button {
+    background: $teal-trans;
+    border: none;
+	border-radius: 0;
+    color: #2e1b46 !important;
+	display: inline-block;
+	font-family: $museo;
+	font-size: 1rem;
+    font-weight: 700;
+	letter-spacing: .05em;
+    line-height: normal;
+    margin: 0 auto;
+    padding: 1.1rem 2rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+	text-transform: uppercase;
+	transition: background-color 300ms ease-out;
+}
+
+.list_view .hc-button {
+    padding: .8rem 1rem !important;
+}
+
+.button.green {
+	background: $green-trans;
+}
+
+.button.green:hover,
+.button.green:focus {
+	background: $green;
+}
+
+.button.pink {
+	background: $pink-trans;
+}
+
+.button.pink:hover,
+.button.pink:focus {
+	background: $pink-bright;
+}
+
+.button.purple {
+	background: $purple-trans;
+	color: $white !important;
+}
+
+.button.purple:hover,
+.button.purple:focus {
+	background: $purple;
+}
+
+.button.teal {
+	background: $teal-trans;
+	color: $white !important;
+}
+
+.button.teal:hover,
+.button.teal:focus {
+	background: $teal;
+}
+
+button:hover,
+.button:hover,
+.button:focus {
+	background: $teal;
+}
+
+.column {
+	position: relative;
+}
+
+.single .childcontainer.float-left {
+	margin: 0 30px 20px 0;
+}
+
+.gform_wrapper {
+	padding: 20px;
+}
+
+.gform_wrapper form label,
+#mc-embedded-subscribe-form label {
+	display: none !important;
+}
+
+.gform_wrapper form .show-label label {
+	display: block !important;
+}
+
+.gform_wrapper .field_sublabel_above ul.gfield_radio li,
+.gform_wrapper .field_sublabel_below ul.gfield_checkbox li {
+	margin-bottom: 15px;
+}
+
+.gform_wrapper .field_sublabel_above ul.gfield_radio li label,
+.gform_wrapper .field_sublabel_below ul.gfield_checkbox li label {
+	display: inline-block !important;
+	vertical-align: top !important;
+}
+
+.gform_wrapper ul li.gfield.column {
+	clear: none;
+}
+
+.gform_wrapper li.show-label {
+    margin: 0 0 40px;
+    box-sizing: border-box;
+}
+
+form textarea,
+form input,
+input[type="text"] {
+	border: 2px solid #dad9d7 !important;
+	box-shadow: none !important;
+	color: $purple !important;
+	font-weight: bold;
+	margin: 0 !important;
+	outline: none;
+	padding: .5em !important;
+	width: 100% !important;
+}
+
+::-webkit-input-placeholder {
+	color: $purple !important;
+	text-transform: uppercase;
+}
+:-moz-placeholder {
+	color: $purple !important;
+	text-transform: uppercase;
+}
+::-moz-placeholder {
+	color: $purple !important;
+	text-transform: uppercase;
+}
+:-ms-input-placeholder {
+	color: $purple !important;
+	text-transform: uppercase;
+}
+
+select {
+	background-color: #fff;
+	border: 2px solid #dad9d7 !important;
+	color: $purple;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+input:not([type]):focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+    background: #fff;
+	border-color: $teal !important;
+}
+
+form input[type="submit"] {
+	border: none !important;
+	letter-spacing: .1em;
+    padding: 1.1rem 4rem !important;
+	width: auto !important;
+}
+
+#mc_embed_signup > .column {
+	padding-top: 0;
+}
+
+form#mc-embedded-subscribe-form {
+	padding: 0 25px;
+}
+
+form#mc-embedded-subscribe-form .column {
+    margin: 0 0 1.5rem;
+}
+
+form#mc-embedded-subscribe-form .indicates-required p {
+	margin: 0;
+	text-align: center;
+}
+
+.gform_wrapper .top_label .gfield_error {
+    width: 100% !important;
+}
+
+.gform_wrapper li.gfield.gfield_error,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+    background-color: transparent !important;
+    margin-bottom: .375em!important !important;
+    padding: 0;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container,
+.gform_wrapper li.gfield_html {
+	max-width: none !important;
+	margin: 0 !important;
+	width: 100% !important;
+}
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container,
+.gform_wrapper li.gfield_html {
+	margin: 0 !important;
+}
+
+.gform_wrapper li.gfield_html h3 {
+	padding-top: 60px !important;
+}
+
+.gform_wrapper .validation_message,
+.gform_wrapper .gfield_description.validation_message,
+.gform_wrapper .top_label .gfield_description.validation_message,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description {
+	background: $pink;
+    color: $white !important;
+	display: block;
+    font-weight: 700;
+    letter-spacing: normal;
+	margin-top: .5em !important;
+	padding: 5px 10px !important;
+}
+
+.gform_wrapper div.validation_error {
+	background: $lightgrey;
+    color: $grey !important;
+    font-size: 1em !important;
+    font-weight: 700;
+    margin-bottom: 1.6em;
+    border-top: none !important;
+    border-bottom: none !important;
+    padding: 1em !important;
+    clear: both;
+    width: 100% !important;
+}
+
+#mc_embed_signup div.mce_inline_error {
+    margin: .5em 0 0 !important;
+    padding: 5px 10px;
+    background-color: $pink !important;
+    font-weight: bold;
+    z-index: 1;
+    color: $white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $purple;
+	font-family: $museo;
+	font-weight: 900;
+	letter-spacing: .01em;
+	line-height: 1.9rem;
+	margin: 0;
+	text-transform: none;
+}
+
+h1 {
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 2rem;
+	line-height: 1.2em;
+	margin-bottom: 20px;
+}
+
+.single #schedule h2 {
+	margin-top: 20px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 1.7rem;
+	line-height: 1.5rem;
+	margin-bottom: 10px;
+}
+
+.blog h3 {
+	font-size: 1.2rem;
+	margin-bottom: 25px;
+}
+
+h4 {
+	font-size: 1rem;
+}
+
+h2 span,
+h1 span {
+	color: $pink-bright;
+	display: block;
+	font-size: 1rem;
+	font-weight: 500;
+	letter-spacing: .05em;
+	line-height: 1;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.iframewrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+
+.iframewrapper iframe {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+img {
+	display: block;
+}
+
+p {
+	color: $grey;
+	line-height: 1.625em;
+}
+
+.regiongreen {
+	background: $green;
+}
+
+.regionpink {
+	background: $pink;
+}
+
+.regionpurple {
+	background: $purple;
+}
+
+.regionteal {
+	background: $teal;
+}
+
+.row {
+	width: 100%;
+}
+
+.textgreen,
+.textgreen p {
+	color: $green;
+}
+
+.textpink,
+.textpink p {
+	color: $pink;
+}
+
+.textpurple,
+.textpurple p {
+	color: $purple;
+}
+
+.textteal,
+.textteal p {
+	color: $teal;
+}
+
+.textuppercase {
+	text-transform: uppercase;
+}
+
+.textwhite,
+.textwhite p {
+	color: $white;
+}
+
+ul li {
+	margin: 0 0 1.09375rem;
+}
+
+ul.simple {
+	margin: 0;
+	padding: 0;
+}
+ul.simple li {
+	list-style: none;
+	margin: 0;
+}
+
+ul.inline li,
+ul.inline.simple li {
+	margin-bottom: 15px;
+}
+
+ul.inline li:last-child,
+ul.inline.simple li:last-child,
+ul.button-list li:last-child {
+	margin-bottom: 0;
+}
+
+
+@media only screen and (min-width: 47.5em) {
+
+	/************ Universal Styles ************/
+
+	.absolute {
+		position: absolute;
+	}
+
+	.absolute.bottom {
+		bottom: 0;
+	}
+
+	.absolute.right {
+		right: 0;
+	}
+
+	.angle {
+		position: relative;
+		z-index: 1;
+
+	     &:after{
+	       background: $white;
+	       content: '';
+	       display: block;
+	       height: 28px;
+	       left: 0;
+	       position: absolute;
+	       right: 0;
+	       z-index: -1;
+	       -webkit-backface-visibility: hidden; // for Chrome Windows
+      	 	outline:1px solid transparent;
+	     }
+
+	     &:after {
+	       bottom: 0;
+	       transform: skewY(-1.5deg);
+	       transform-origin: 100%;
+	     }
+	}
+
+	.angle.border:after {
+	   border-top: 4px solid $pink;
+	   outline: none;
+	}
+
+	.banner .angle:after {
+		height: 60px;
+	}
+
+	.angle.left {
+		float: none !important;
+	     &:after{
+	       background: $white;
+	       content: '';
+	       display: block;
+	       height: 28px;
+	       left: 0;
+	       position: absolute;
+	       right: 0;
+	       z-index: -1;
+	       -webkit-backface-visibility: hidden; // for Chrome Windows
+      	 	outline:1px solid transparent;
+	     }
+
+	     &:after {
+	       bottom: 0;
+	       transform: skewY(1.5deg);
+	       transform-origin: 0%;
+	     }
+	}
+
+	.angle-bottom {
+		position: relative;
+		z-index: 1;
+
+	     &:before{
+	       background: $white;
+	       content: '';
+	       display: block;
+	       height: 28px;
+	       left: 0;
+	       position: absolute;
+	       right: 0;
+	       z-index: -1;
+	       -webkit-backface-visibility: hidden; // for Chrome Windows
+      	 	outline:1px solid transparent;
+	     }
+
+	     &:before {
+	       top: 0;
+	       transform: skewY(-1.5deg);
+	       transform-origin: 100%;
+	     }
+	}
+
+	#contact .angle-bottom {
+		margin-top: 20px;
+	}
+
+	#contact .angle-bottom:before {
+		height: 45px;
+		top:-42px;
+	}
+
+	.angle-bottom.border:before {
+	   border-bottom: 4px solid $pink;
+	}
+
+	.slideshowcontainer .angle {
+		margin-bottom: 40px;
+	}
+
+	.slideshowcontainer .angle:after {
+		height: 42px;
+	}
+
+	#columns .angle {
+		clear: both;
+	}
+
+	#columns .angle:after {
+		height: 42px;
+	}
+
+	#columns {
+		position: relative;
+		margin-bottom: 40px;
+	}
+
+	.container,
+	footer {
+		max-width: 1600px;
+		margin: 0 auto;
+	}
+
+	form input[type="submit"] {
+		margin-left: .75em !important;
+	}
+
+	.gform_wrapper .ginput_complex input[type="text"] {
+		margin: 0 0 1rem !important;
+	}
+
+	.gform_wrapper .top_label .gfield_error.column {
+	    padding-left: .75em;
+		padding-right: .75em;
+	}
+
+	.gform_wrapper .top_label .gfield_error.column.medium-6 {
+	    width: 50% !important;
+	}
+
+	.gform_wrapper li.show-label {
+	    width: 50%;
+	    float: left;
+	    margin: 0 0 40px;
+	    clear: none !important;
+	    box-sizing: border-box;
+	}
+
+	.gform_wrapper li.show-label.first {
+		clear: both !important;
+	}
+
+	.gform_wrapper li.show-label.fullwidth {
+		width: 100%;
+	}
+
+	.mb30 {
+		margin-bottom: 30px;
+	}
+
+	.mt50 {
+		margin-top: 50px;
+	}
+
+	.medium-6:nth-child(2n+1) {
+		clear: both
+	}
+
+	form#mc-embedded-subscribe-form {
+		margin-bottom: 40px !important;
+	}
+
+	form#mc-embedded-subscribe-form input[type="submit"] {
+		margin-left: 0 !important;
+	}
+
+	form#mc-embedded-subscribe-form .indicates-required p {
+		color: $pink;
+		margin: 0 15px 10px;
+		text-align: right;
+	}
+
+	#mc_embed_signup_scroll:after {
+		clear: both;
+		content: "";
+		display: block;
+	}
+
+	.imageoverflow {
+		display: block;
+		line-height: 0;
+		overflow: hidden;
+	}
+
+	.imageoverflow img {
+		height: 100%;
+		max-width: none;
+		width: auto;
+	}
+
+	.mt60 {
+		margin-top: 60px;
+	}
+
+	.pb30 {
+		padding-bottom: 30px;
+	}
+
+	.relative {
+		position: relative;
+	}
+
+	ul.inline li,
+	ul.inline.simple li {
+		display: inline-block;
+		margin: 0 0 0 10px;
+	}
+
+	ul.inline li:first-child,
+	ul.inline.simple li:first-child {
+		margin: 0;
+	}
+
+	ul.inline.simple.buttons li {
+		margin-left: 40px;
+	}
+
+	ul.inline.simple.buttons li:first-child {
+		margin-left: 0;
+	}
+
+}
+
+
+@media only screen and (min-width: 64.0625em) {
+	.medium-6:nth-child(2n+1) {
+		clear: none;
+	}
+
+	.large-4:nth-child(3n+1) {
+		clear: both;
+	}
+}
+
+@media only screen and (min-width: 100em) {
+
+}
+
+@media only screen and (max-width: 47.4375em) {
+
+	.column {
+		padding: 25px;
+	}
+
+	.column .column {
+		padding: 0;
+	}
+
+	footer .column {
+		padding: 0;
+	}
+
+	.mobile-grey {
+		background: $grey;
+	}
+
+	.mobile-teal {
+		background: $teal;
+	}
+
+	.textwhite,
+	.textwhite p {
+		color: $purple;
+	}
+}
+
+@import 'header';
+@import 'slideshow';
+@import 'content';
+@import 'healcode';
+@import 'footer';

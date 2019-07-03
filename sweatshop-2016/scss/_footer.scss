@@ -1,0 +1,330 @@
+/************ Footer ************/
+
+@import 'variables';
+
+#contact .column {
+	background: $lightgrey;
+	padding: 0;
+}
+
+#contact dl dt,
+#contact dl dd,
+#contact p {
+	color: $purple;
+	margin: 0;
+}
+
+#contact dl {
+	margin: 0;
+	padding: 10px 20px 15px;
+}
+
+#contact dl:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+#contact dl dt,
+#contact dl dd {
+	float: left;
+	font-family: $museo;
+	font-weight: 700;
+	letter-spacing: .01em;
+	margin: 0 0 5px;
+	text-transform: uppercase;
+	width: 50%;
+}
+
+#contact dl dt {
+	clear: both;
+}
+
+#contact h2 {
+	margin-bottom: 0;
+	padding: 20px;
+	text-align: center;
+}
+
+#contact h3 {
+	border-bottom: 2px solid $pink;
+	padding: 25px 20px 20px;
+	text-align: center;
+}
+
+#contact p {
+	line-height: 1.25em;
+	padding: 10px 20px;
+	text-align: center;
+}
+
+footer {
+	background: $teal;
+	position: relative;
+	z-index: 1;
+	
+    &:before {
+       background: inherit;
+       content: '';
+       display: block;
+       height: 50%;
+       left: 0;
+       position: absolute;
+       right: 0;
+       z-index: -1;
+       -webkit-backface-visibility: hidden;
+      outline:1px solid transparent;
+     }
+
+     &:before {
+       top: 0;
+       transform: skewY(1deg);
+       transform-origin: 100% 0;
+     }
+}
+
+footer {
+	padding: 15px 25px;
+}
+
+footer p {
+	color: $white;
+	font-size: 10px;
+	margin: -5px 0 0;
+}
+
+footer ul.inline.simple {
+	margin-top: 20px;
+}
+
+footer ul.inline.simple li {
+	margin-bottom: 5px !important;
+	text-align: center;
+}
+	
+footer ul li a {
+	color: $white;
+	font-family: $museo;
+	font-size: .875em;
+	letter-spacing: .02em;
+	text-transform: uppercase;
+}
+
+footer ul li.facebook a,
+footer ul li.twitter a {
+    display: inline-block;
+    height: 36px;
+    overflow: hidden;
+    text-align: center;
+    width: 17px;
+}
+
+footer ul li.twitter a {
+	width: 44px;
+}
+
+footer ul li.facebook a:before,
+footer ul li.twitter a:before {
+	color: $purple;
+    content: '\f09a';
+    display: block;
+    height: inherit;
+    font-family: 'FontAwesome';
+    width: inherit;
+    font-size: 2.4em;
+    line-height: 1.2em;
+}
+
+footer ul li.twitter a:before {
+	content: '\f099';
+}
+
+@media only screen and (min-width: 47.5em) {
+
+	#contact {
+		overflow: hidden;
+	    position: relative;
+	}
+	
+	#contact .column {
+		background: transparent;
+	}
+	
+	#contact .column.medium-8 {
+		background: $lightgrey;
+		width: 64%;
+		position: relative;
+		z-index: 1;
+	
+		    &:before {
+		       background: inherit;
+		       content: '';
+		       display: block;
+		       height: 50%;
+		       left: 0;
+		       position: absolute;
+		       right: 0;
+		       z-index: -1;
+		       -webkit-backface-visibility: hidden;
+		      outline:1px solid transparent;
+		     }
+
+		     &:before {
+		       top: 0;
+		       transform: skewY(-1.5deg);
+		       transform-origin: 0;
+		     }
+	}
+	
+	#contact .contact-bottom,
+	#contact .contact-top {
+		background: $lightgrey;
+		padding: 28px 31px 18px;
+	}
+	
+	#contact .contact-bottom {
+		height: 47%;
+		padding: 18px 31px 28px;
+	}
+
+	#contact .contact-top {
+		border-bottom: 2px solid $pink;
+		height: 50%;
+		margin-top: 8px;
+		position: relative;
+		z-index: 1;
+	
+		    &:before {
+		       background: $lightgrey;
+		       content: '';
+		       display: block;
+		       height: 50%;
+		       left: 0;
+		       position: absolute;
+		       right: 0;
+		       z-index: -1;
+		       -webkit-backface-visibility: hidden;
+		      outline:1px solid transparent;
+		     }
+
+		     &:before {
+		       top: 0;
+		       transform: skewY(-1.5deg);
+		       transform-origin: 0;
+		     }
+	}
+	
+	#contact dl {
+		padding: 14px 31px 18px;
+	}
+
+	#contact h2 {
+		color: $white;
+		padding: 0px 0 30px;
+		text-align: center;
+	}
+	
+	#contact h3 {
+		border-bottom: none;
+		margin-bottom: 7px;
+		padding: 0;
+		text-align: left;
+	}
+	
+	#contact .column.medium-8 h3 {
+		border-bottom: 2px solid $pink;
+		padding: 20px 0 15px;
+		text-align: center;
+	}
+	
+	#contact img {
+		max-width: 150%;
+	}
+	
+	#contact p {
+		padding: 0;
+		text-align: left;
+	}
+
+	#contact .row {
+		@include aligncenter();
+	    max-width: 636px;
+	}
+	
+	footer .row {
+		position: relative;
+	}
+
+	footer .row .column:nth-child(2) {
+		@include alignvert();
+		right: 0;
+	}
+	
+	footer ul.inline.simple {
+		margin-top: 0;
+	}
+	
+	footer ul.inline.simple li {
+		margin-left: 16px !important;
+		text-align: left;
+		vertical-align: middle;
+	}
+	
+	footer ul.inline.simple li.twitter {
+		margin-left: 5px !important;
+	}
+
+	footer ul li.facebook a,
+	footer ul li.twitter a {
+	    height: 36px;
+	    overflow: hidden;
+	    text-align: center;
+	    width: 17px;
+	}
+
+	footer ul li.twitter a {
+		width: 44px;
+	}
+
+	footer ul li.facebook a:before,
+	footer ul li.twitter a:before {
+	    height: inherit;
+	    width: inherit;
+	}
+}
+
+@media only screen and (min-width: 64.0625em) {
+
+
+	#contact dl dt,
+	#contact dl dd {
+		margin: 0 0 10px;
+	}
+
+	#contact h2 {
+		padding: 0px 0 40px;
+	}
+	
+	#contact img {
+		max-width: 120%;
+	}
+	
+	footer ul.inline.simple li {
+		margin-left: 25px !important;
+		vertical-align: middle;
+	}
+	
+	footer ul.inline.simple li.twitter {
+		margin-left: 5px !important;
+	}
+	
+}
+
+@media only screen and (min-width: 100em) {
+	
+	#contact img {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+

@@ -1,0 +1,56 @@
+/* FONTS */
+
+$proxima: "proxima-nova", helvetica, verdana, arial, sans-serif;
+$museo: "Amaranth", "proxima-nova", helvetica, verdana, arial, sans-serif;
+
+
+/* COLORS */
+/* Original */
+//$green: #C6DB58;
+//$green-trans: RGBA(198, 219, 88, .85);
+/* Pantone */
+//$green: #8e9a36;
+//$green-trans: RGBA(142,154,54, .85);
+$green: #A6C301;
+$green-trans: RGBA(166, 195, 1, .85);
+
+
+$grey: #696969;
+$grey-trans: RGBA(105, 105, 105, .85);
+
+$lightgrey: #f5f5f5;
+$lightgrey-trans: RGBA(218, 217, 215, .85);
+
+$pink: #EA4E01;
+$pink-trans:RGBA(250, 167, 25,.85);
+$pink-bright: #EA4E01;
+
+$purple: #3A174C;
+$purple-trans: RGBA(58, 23, 76,.85);
+
+$teal: #7BCED4;
+$teal-trans: RGBA(123, 206, 212, .85);
+
+$white: #fff;
+$white-trans: RGBA(255, 255, 255, .85);
+
+/* MIXINS */
+
+@mixin alignvert() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin alignhorz() {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin aligncenter() {
+	left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}

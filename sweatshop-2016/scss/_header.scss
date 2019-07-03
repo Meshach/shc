@@ -1,0 +1,471 @@
+/************ Header ************/
+
+@import 'variables';
+
+header {
+	background: $purple;
+	position: relative;
+	z-index: 1;
+
+    &:after {
+      background: inherit;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      -webkit-backface-visibility: hidden; // for Chrome Windows
+      outline:1px solid transparent;
+    }
+
+    &:after {
+      bottom: 0;
+      transform: skewY(1.5deg);
+      transform-origin: 0;
+    }
+}
+
+.toggle-container {
+	height: 3.2em;
+	position: relative;
+}
+
+.title-bar {
+    background: transparent;
+    color: $white;
+    padding: 0.5rem;
+}
+
+.title-bar button {
+	background: transparent;
+	color: $white !important;
+	font-size: 1.5em;
+	line-height: 2.5rem;
+	padding: 0 15px;
+}
+
+.title-bar-title {
+	display: block;
+	left: 15px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+.topBanner {
+	margin: 0 auto;
+	max-width: 1600px;
+
+	.collapsedBanner {
+		padding: 10px;
+
+		.flex-container {
+			@media only screen and (min-width: 47.5em) {
+				align-items: center;
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+				justify-content: center;
+			}
+
+			.button {
+				flex-shrink: 0;
+				margin: 0 0 0 20px;
+				padding: 7px 20px;
+			}
+
+			p {
+				color: #fff;
+				font-size: 17px;
+				@media only screen and (min-width: 47.5em) {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.expandedBanner {
+		border-bottom: 3px solid $pink;
+		padding: 10px;
+
+		@media only screen and (min-width: 47.5em) {
+			padding: 20px;
+		}
+
+		@media only screen and (min-width: 64em) {
+			padding: 20px 20px 40px;
+		}
+
+		button {
+			background-color: $green;
+			border-radius: 100%;
+			font-size: 20px;
+			padding: 10px 13px 10px 15px;
+			position: absolute;
+			right: 10px;
+			text-align: center;
+			top: 0;
+
+			&:hover {
+				background-color: lighten($green, 5%)
+			}
+		}
+
+		.expandedForm {
+			@media only screen and (max-width: 47.5em) {
+				padding-top: 0;
+			}
+
+			@media only screen and (min-width: 47.5em) {
+				padding-top: 15px;
+			}
+		}
+
+		.gform_wrapper {
+			margin: 0;
+			padding: 0;
+
+			ul {
+				&:after {
+					clear: both;
+					content: "";
+					display: block;
+				}
+
+				li {
+					&.half {
+						@media only screen and (min-width: 47.5em) {
+							clear: none;
+							float: left;
+							margin: 0 0 2% 2% !important;
+							padding: 0;
+							width: 49%;
+						}
+					}
+
+					&.first {
+						@media only screen and (min-width: 47.5em) {
+							clear: both;
+							margin-left: 0 !important;
+						}
+					}
+
+					&.fullwidth {
+						padding: 0;
+						width: 100%;
+					}
+
+					.ginput_container {
+						margin: 0;
+					}
+
+					select {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.gform_footer {
+				margin: 10px 0 0;
+				min-height: 0;
+				padding: 0;
+				text-align: center;
+
+				input {
+					margin: 0 auto;
+				}
+			}
+		}
+
+		h2, p {
+			color: #fff;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.indicates-required {
+			margin-bottom: 5px;
+		}
+
+		> .row {
+			position: relative;
+		}
+
+	}
+}
+
+.top-bar {
+	background: inherit;
+	padding: 5px 0 0;
+}
+
+.top-bar .login a {
+    display: block;
+    line-height: 1;
+	padding: 0.7rem 1rem;
+}
+
+.top-bar .mobile.menu,
+.top-bar .mobile .menu {
+	background: $purple;
+}
+
+.top-bar .mobile.menu li {
+	background: inherit;
+	display: block;
+	margin: 0;
+}
+
+.top-bar .mobile.menu li a,
+.top-bar .login a {
+	background: inherit;
+    border-bottom: rgba(0,0,0,.2) solid 1px;
+	color: $teal;
+	display: block;
+    font-size: 0.8125em;
+	letter-spacing: .1em;
+	line-height: 1;
+	padding: 1.2em 15px;
+	text-transform: uppercase;
+}
+
+.top-bar .mobile.menu li:last-child a {
+	padding-bottom: 2em;
+}
+
+.top-bar .mobile.menu .is-drilldown-submenu {
+	background-color: $purple;
+	margin: 0;
+}
+
+.top-bar .mobile.menu .js-drilldown-back a {
+	color: $green;
+	font-family: $museo;
+	font-size: 1em;
+}
+
+.top-bar .mobile.menu .js-drilldown-back > a::before,
+.top-bar .mobile.menu .is-drilldown-submenu-parent > a::after {
+	content: "\f104";
+	font-family: FontAwesome;
+	border: none;
+	font-size: 1.3em;
+	font-weight: bold;
+	line-height: 0em;
+	margin-top:-2px;
+	margin-right: .9em;
+}
+
+.top-bar .mobile.menu .is-drilldown-submenu-parent > a::after {
+	content: "\f105";
+	margin-right: 0;
+	margin-top: 0;
+}
+
+@media only screen and (min-width: 47.5em) {
+
+	header {
+		background: $white;
+		padding: 0 1.5em 1em;
+	}
+
+	.title-bar-title {
+		display: inline-block;
+		position: static;
+		top: auto;
+		transform: none;
+	}
+
+	.toggle-container {
+		height: auto;
+	    max-width: 26%;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.top-bar {
+		background: transparent;
+		float: right;
+		max-width: 74%;
+		padding-top: 14px;
+		position: relative;
+		z-index: 100;
+	}
+
+	.top-bar ul.secondary {
+		background: transparent;
+		float: right;
+    	margin-top: 13px;
+	}
+
+	.top-bar ul.main {
+		background: transparent;
+		clear: both;
+		float: right;
+		margin-top: 30px;
+	}
+
+	.top-bar .menu li a {
+		font-family: $museo;
+		font-size: .8125em;
+		font-weight: bold;
+		margin-left: 20px;
+		padding: 0;
+		text-transform: uppercase;
+	}
+
+	.top-bar ul.secondary li a {
+		color: $teal;
+	}
+
+	.top-bar .menu li a,
+	.top-bar .login a {
+		border-bottom: 4px solid transparent !important;
+		box-shadow: none;
+		color: $purple;
+		font-family: $museo;
+		//font-size: .75em;
+		font-weight: 700;
+		letter-spacing: .03em;
+		line-height: 1;
+		padding: 0 0 4px 0;
+	}
+
+	.top-bar .menu > li > a:hover {
+		background: transparent;
+		color: $purple;
+	    border-bottom: 4px solid $teal !important;
+	}
+
+	.top-bar .menu > li > ul li a:hover {
+		color: $pink;
+	}
+
+	.top-bar .menu > li.current_page_item > a,
+	.top-bar .menu > li.current-page-ancestor > a{
+	    border-bottom: 4px solid $pink !important;
+	}
+
+	.top-bar .menu > li ul li.current_page_item a {
+		color: $pink;
+	}
+
+	.top-bar .menu li.is-active > a {
+	    border-bottom: 4px solid $teal !important;
+	}
+
+	.dropdown.menu > li.is-dropdown-submenu-parent > a {
+		padding-right: 0;
+	}
+
+	.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+		display: none;
+	}
+
+	.top-bar .menu ul {
+		background: $white;
+		border: none;
+		list-style: none;
+		margin: 0 0 0 10px;
+		padding: 10px;
+	}
+
+	.top-bar .menu ul li {
+		margin: 0;
+	}
+
+	.top-bar .menu ul li a {
+		display: block;
+		margin: 0;
+		padding: .5em 0;
+	}
+
+	.top-bar .secondary-buttons {
+		float: right;
+	}
+
+	.top-bar .healcode-widget,
+	.top-bar .healcodediv {
+		float: right;
+		margin-left: 20px;
+		margin-top: 7px;
+
+		a {
+			border: 2px solid $teal !important;
+			color: $teal;
+			font-family: $museo;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 1;
+			padding: 8px 16px;
+
+			&:hover {
+				color: #3a174c;
+			}
+		}
+	}
+
+	.top-bar .login {
+		float: right;
+		margin-left: 20px;
+	}
+
+	.top-bar .login a {
+		border: 2px solid $teal !important;
+		color: $teal;
+		line-height: 1;
+		padding: 10px 16px;
+	}
+
+	.top-bar .login a:hover {
+		color: $purple;
+	}
+
+	.schedule-button {
+	  float: left;
+	  margin-left: 20px;
+	  margin-top: 7px; }
+
+	.schedule-button a {
+	  border: 2px solid #7BCED4 !important;
+	  color: #7BCED4;
+	  font-size: .8125em;
+	  font-family: "Amaranth", "proxima-nova", helvetica, verdana, arial, sans-serif;
+	  font-weight: 700;
+	  line-height: 1;
+	  padding: 9px 16px 8px;
+	  text-transform: uppercase; }
+
+	.schedule-button a:hover {
+	  color: #3A174C; }
+
+}
+
+@media only screen and (min-width: 64.0625em) {
+
+
+
+	.toggle-container {
+	    max-width: 31%;
+	}
+
+	.top-bar {
+		max-width: 69%;
+	}
+
+	.top-bar ul.main {
+		margin-top: 20px;
+	}
+
+}
+
+@media only screen and (min-width: 100em) {
+
+
+}
+
