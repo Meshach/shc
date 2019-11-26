@@ -365,7 +365,16 @@ if(have_posts()) : while (have_posts()) : the_post();
 				endif;
 
 			endif; // Banner
+			
+			if(get_row_layout() == 'content'):
+				$content = get_sub_field('content_area');
 
+				echo '<div class="row content_content"><div class="column" >
+					'.$content.'
+				</div></div><!-- .row -->';
+
+			endif; // Content
+			
 			if(get_row_layout() == 'image'):
 				$i_image = get_sub_field('content_image');
 				$i_size = 'tn1012crop';
@@ -419,6 +428,8 @@ if(have_posts()) : while (have_posts()) : the_post();
 					echo '</div>';
 				echo '</div>';
 			endif; // promotions
+			
+	
 
 		endwhile; // Page Details
 	endif; // Page Details
