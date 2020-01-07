@@ -239,7 +239,7 @@ echo '<div class="row" id="ctas">';
 
 		echo '<div class="medium-centered column medium-6 textwhite">
 			<div class="cta regionpurple">
-				<h2 class="text-center">Figure it out?</h2>
+				<h2 class="text-center">Ready to register?</h2>
 				<a href="/professional-training/registration/" class="button green">Register Today</a>
 			</div><!-- .cta -->
 		</div><!-- .column medium-6 -->';
