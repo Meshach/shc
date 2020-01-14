@@ -228,6 +228,16 @@ if(have_posts()) : while (have_posts()) : the_post();
 						echo '</div>';
 					echo '</div>';
 				endif; // promotions
+				
+			if(get_row_layout() == 'content'):
+				$content = get_sub_field('content_area');
+
+				echo '<div class="row">
+					'.$content.'
+				</div><!-- .row -->';
+
+			endif; // Content
+			
 
 			endwhile; // Page Details
 		endif; // Page Details
