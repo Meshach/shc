@@ -232,7 +232,7 @@ if(have_posts()) : while (have_posts()) : the_post();
 			if(get_row_layout() == 'content'):
 				$content = get_sub_field('content_area');
 
-				echo '<div class="row">
+				echo '<div class="row content_content">
 					'.$content.'
 				</div><!-- .row -->';
 
