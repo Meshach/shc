@@ -1,4 +1,4 @@
-var $d=jQuery.noConflict();var width;$d(document).ready(function(){width=$d(window).width();$d(document).foundation();$d(".slideshow.active").bxSlider({auto:true,nextText:'<i class="fa fa-angle-right"></i>',prevText:'<i class="fa fa-angle-left"></i>'});function a(){$d(".carousel").bxSlider({infiniteLoop:false,maxSlides:3,minSlides:3,hideControlOnEnd:true,nextText:'<i class="fa fa-angle-right"></i>',prevText:'<i class="fa fa-angle-left"></i>',slideMargin:20,slideWidth:300})}if(width>759){a()}});
+var $d=jQuery.noConflict();var width;$d(document).ready(function(){width=$d(window).width();$d(document).foundation();$d(".slideshow.active").bxSlider({auto:true,autoHover:true,nextText:'<i class="fa fa-angle-right"></i>',prevText:'<i class="fa fa-angle-left"></i>',pause:6000});function a(){$d(".carousel").bxSlider({infiniteLoop:false,maxSlides:3,minSlides:3,hideControlOnEnd:true,nextText:'<i class="fa fa-angle-right"></i>',prevText:'<i class="fa fa-angle-left"></i>',slideMargin:20,slideWidth:300})}if(width>759){a()}});
 
 
 $d(document).ready(function() {

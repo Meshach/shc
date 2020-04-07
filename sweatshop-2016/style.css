@@ -7,14 +7,6 @@ Version: 1.0
 License: GNU General Public License
 License URI: license.txt
 
- W A R N I N G
- 
- This is out of sync with the SASS source.
- It was manually edited by Lon Koenig from Firebrand in May of 2019
- To make the Join boxes taller.
- 
- 
- 
 ---------- CSS 3 Styles ----------- */
 /* FONTS */
 /* COLORS */
@@ -1373,11 +1365,6 @@ header:after {
   transform: translatez(0);
 }
 
-/* line 32, scss/_slideshow.scss */
-.bx-wrapper .bx-pager {
-  display: none;
-}
-
 /* line 36, scss/_slideshow.scss */
 .bx-wrapper .bx-controls-direction {
   max-width: 320px;
@@ -1540,11 +1527,6 @@ header:after {
   }
 
   /* PAGER */
-  /* line 178, scss/_slideshow.scss */
-  .bx-wrapper .bx-controls-direction {
-    display: none;
-  }
-
   /* line 182, scss/_slideshow.scss */
   #classcarousel .bx-wrapper .bx-controls-direction {
     display: block;
@@ -1591,7 +1573,7 @@ header:after {
   /* line 217, scss/_slideshow.scss */
   .bx-wrapper .bx-has-pager {
     max-width: 63.125em;
-    margin-top: 15px;
+    margin: 15px auto 0;
     width: 100%;
   }
 
@@ -1705,13 +1687,13 @@ header:after {
 
   /* line 318, scss/_slideshow.scss */
   .bx-wrapper .bx-controls-direction a {
-    left: -35px;
+    left: 35px;
   }
 
   /* line 322, scss/_slideshow.scss */
   .bx-wrapper .bx-controls-direction a.bx-next {
     left: auto;
-    right: -35px;
+    right: 35px;
   }
 
   /* line 327, scss/_slideshow.scss */
@@ -2770,8 +2752,7 @@ header:after {
 
   /* line 911, scss/_content.scss */
   #join .column {
-  /* was 335px */
-    height: 360px !important;
+    height: 335px !important;
     margin-bottom: 60px;
   }
 
@@ -2790,12 +2771,12 @@ header:after {
 
   /* line 927, scss/_content.scss */
   #join .column:nth-child(1) .join-banner {
-    height: 346px; /* was 296 */
+    height: 296px;
   }
 
   /* line 931, scss/_content.scss */
   #join .column:nth-child(2) .join-banner {
-    height: 354px; /* was 304 */
+    height: 304px;
   }
 
   /* line 935, scss/_content.scss */
@@ -2805,7 +2786,7 @@ header:after {
 
   /* line 939, scss/_content.scss */
   #join .column:nth-child(3) .join-banner {
-    height: 362px; /* was 312 */
+    height: 312px;
   }
 
   /* line 943, scss/_content.scss */
@@ -2815,7 +2796,7 @@ header:after {
 
   /* line 947, scss/_content.scss */
   #join .column:nth-child(4) .join-banner {
-    height: 370px; /* was 320 */
+    height: 320px;
   }
 
   /* line 951, scss/_content.scss */
